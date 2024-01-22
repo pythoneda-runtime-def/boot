@@ -46,8 +46,8 @@
       let
         org = "pythoneda-runtime";
         repo = "boot";
-        version = "0.0.0";
-        sha256 = "0sp1pxy9mc1a6hwgfprh5k5ccssdgszj8fpdkqfh30phnjn4ahzx";
+        version = "0.0.1";
+        sha256 = "0hbichgxajkxrwdv1d66pgpbqp853jak0hdh7fbakwwa98cliphl";
         pname = "${org}-${repo}";
         pythonpackage = "pythoneda.runtime.boot";
         package = builtins.replaceStrings [ "." ] [ "/" ] pythonpackage;
