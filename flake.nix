@@ -64,9 +64,8 @@
         nixpkgsRelease =
           builtins.replaceStrings [ "\n" ] [ "" ] "nixos-${nixosVersion}";
         shared = import "${pythoneda-shared-banner}/nix/shared.nix";
-        pythoneda-shared-runtime-lifecycle-events-for = { python
-          , pythoneda-shared-domain, pythoneda-shared-runtime-lifecycle-events
-          }:
+        pythoneda-runtime-boot-for = { python, pythoneda-shared-domain
+          , pythoneda-shared-runtime-lifecycle-events }:
           let
             pythonVersionParts = builtins.splitVersion python.version;
             pythonMajorVersion = builtins.head pythonVersionParts;
@@ -144,8 +143,7 @@
                 }/bin/banner.sh";
               extra-namespaces = "";
               nixpkgs-release = nixpkgsRelease;
-              package =
-                packages.pythoneda-shared-runtime-lifecycle-events-python38;
+              package = packages.pythoneda-runtime-boot-python38;
               python = pkgs.python38;
               pythoneda-shared-banner =
                 pythoneda-shared-banner.packages.${system}.pythoneda-shared-banner-python38;
@@ -160,8 +158,7 @@
                 }/bin/banner.sh";
               extra-namespaces = "";
               nixpkgs-release = nixpkgsRelease;
-              package =
-                packages.pythoneda-shared-runtime-lifecycle-events-python39;
+              package = packages.pythoneda-runtime-boot-python39;
               python = pkgs.python39;
               pythoneda-shared-banner =
                 pythoneda-shared-banner.packages.${system}.pythoneda-shared-banner-python39;
@@ -176,8 +173,7 @@
                 }/bin/banner.sh";
               extra-namespaces = "";
               nixpkgs-release = nixpkgsRelease;
-              package =
-                packages.pythoneda-shared-runtime-lifecycle-events-python310;
+              package = packages.pythoneda-runtime-boot-python310;
               python = pkgs.python310;
               pythoneda-shared-banner =
                 pythoneda-shared-banner.packages.${system}.pythoneda-shared-banner-python310;
@@ -192,8 +188,7 @@
                 }/bin/banner.sh";
               extra-namespaces = "";
               nixpkgs-release = nixpkgsRelease;
-              package =
-                packages.pythoneda-shared-runtime-lifecycle-events-python311;
+              package = packages.pythoneda-runtime-boot-python311;
               python = pkgs.python311;
               pythoneda-shared-banner =
                 pythoneda-shared-banner.packages.${system}.pythoneda-shared-banner-python311;
@@ -203,41 +198,36 @@
             };
         };
         packages = rec {
-          default = pythoneda-shared-runtime-lifecycle-events-default;
-          pythoneda-shared-runtime-lifecycle-events-default =
-            pythoneda-shared-runtime-lifecycle-events-python311;
-          pythoneda-shared-runtime-lifecycle-events-python38 =
-            pythoneda-shared-runtime-lifecycle-events-for {
-              python = pkgs.python38;
-              pythoneda-shared-domain =
-                pythoneda-shared-domain.packages.${system}.pythoneda-shared-domain-python38;
-              pythoneda-shared-runtime-lifecycle-events =
-                pythoneda-shared-runtime-lifecycle-events.packages.${system}.pythoneda-shared-runtime-lifecycle-events-python38;
-            };
-          pythoneda-shared-runtime-lifecycle-events-python39 =
-            pythoneda-shared-runtime-lifecycle-events-for {
-              python = pkgs.python39;
-              pythoneda-shared-domain =
-                pythoneda-shared-domain.packages.${system}.pythoneda-shared-domain-python39;
-              pythoneda-shared-runtime-lifecycle-events =
-                pythoneda-shared-runtime-lifecycle-events.packages.${system}.pythoneda-shared-runtime-lifecycle-events-python39;
-            };
-          pythoneda-shared-runtime-lifecycle-events-python310 =
-            pythoneda-shared-runtime-lifecycle-events-for {
-              python = pkgs.python310;
-              pythoneda-shared-domain =
-                pythoneda-shared-domain.packages.${system}.pythoneda-shared-domain-python310;
-              pythoneda-shared-runtime-lifecycle-events =
-                pythoneda-shared-runtime-lifecycle-events.packages.${system}.pythoneda-shared-runtime-lifecycle-events-python310;
-            };
-          pythoneda-shared-runtime-lifecycle-events-python311 =
-            pythoneda-shared-runtime-lifecycle-events-for {
-              python = pkgs.python311;
-              pythoneda-shared-domain =
-                pythoneda-shared-domain.packages.${system}.pythoneda-shared-domain-python311;
-              pythoneda-shared-runtime-lifecycle-events =
-                pythoneda-shared-runtime-lifecycle-events.packages.${system}.pythoneda-shared-runtime-lifecycle-events-python311;
-            };
+          default = pythoneda-runtime-boot-default;
+          pythoneda-runtime-boot-default = pythoneda-runtime-boot-python311;
+          pythoneda-runtime-boot-python38 = pythoneda-runtime-boot-for {
+            python = pkgs.python38;
+            pythoneda-shared-domain =
+              pythoneda-shared-domain.packages.${system}.pythoneda-shared-domain-python38;
+            pythoneda-shared-runtime-lifecycle-events =
+              pythoneda-shared-runtime-lifecycle-events.packages.${system}.pythoneda-shared-runtime-lifecycle-events-python38;
+          };
+          pythoneda-runtime-boot-python39 = pythoneda-runtime-boot-for {
+            python = pkgs.python39;
+            pythoneda-shared-domain =
+              pythoneda-shared-domain.packages.${system}.pythoneda-shared-domain-python39;
+            pythoneda-shared-runtime-lifecycle-events =
+              pythoneda-shared-runtime-lifecycle-events.packages.${system}.pythoneda-shared-runtime-lifecycle-events-python39;
+          };
+          pythoneda-runtime-boot-python310 = pythoneda-runtime-boot-for {
+            python = pkgs.python310;
+            pythoneda-shared-domain =
+              pythoneda-shared-domain.packages.${system}.pythoneda-shared-domain-python310;
+            pythoneda-shared-runtime-lifecycle-events =
+              pythoneda-shared-runtime-lifecycle-events.packages.${system}.pythoneda-shared-runtime-lifecycle-events-python310;
+          };
+          pythoneda-runtime-boot-python311 = pythoneda-runtime-boot-for {
+            python = pkgs.python311;
+            pythoneda-shared-domain =
+              pythoneda-shared-domain.packages.${system}.pythoneda-shared-domain-python311;
+            pythoneda-shared-runtime-lifecycle-events =
+              pythoneda-shared-runtime-lifecycle-events.packages.${system}.pythoneda-shared-runtime-lifecycle-events-python311;
+          };
         };
       });
 }
