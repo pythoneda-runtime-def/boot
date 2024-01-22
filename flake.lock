@@ -99,16 +99,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1705829835,
-        "narHash": "sha256-9ybhwpXU4pjQgWwUcEWfxyphrcDZGakbpRk7fP9TYcc=",
+        "lastModified": 1705936162,
+        "narHash": "sha256-QkwAMUFe4UwhdAPrlrgqlN0HE+INdgPXpn2OYLq0RsE=",
         "owner": "pythoneda-shared-runtime-def",
         "repo": "lifecycle-events",
-        "rev": "673d5b861b686a3255a37dd30afb6a731ea21fd8",
+        "rev": "c66e2e97d8f7945841ed85eb123ab18fd4be7fee",
         "type": "github"
       },
       "original": {
         "owner": "pythoneda-shared-runtime-def",
-        "ref": "0.0.2",
+        "ref": "0.0.3",
         "repo": "lifecycle-events",
         "type": "github"
       }
