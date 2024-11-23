@@ -42,16 +42,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1732128805,
-        "narHash": "sha256-aHBOkLEXhfXTMPpSeJ97S9synWqrP6qlWIzGr5ZqJ9c=",
+        "lastModified": 1732348001,
+        "narHash": "sha256-KWtaUyJ+DPNhyJvjF4rESakYu5y1AIlb26MRcGa6REU=",
         "owner": "pythoneda-shared-pythonlang-def",
         "repo": "banner",
-        "rev": "5f9b962f66ee603c942303218f17e3304fee9eb0",
+        "rev": "7c5b4e080a63d3ac1749aebe1372ed7c89f92415",
         "type": "github"
       },
       "original": {
         "owner": "pythoneda-shared-pythonlang-def",
-        "ref": "0.0.63",
+        "ref": "0.0.69",
         "repo": "banner",
         "type": "github"
       }
@@ -69,16 +69,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1732297531,
-        "narHash": "sha256-q8u00vZC2vAphBM562tAlYuTVKUm1UsUzWz7jqrlnck=",
+        "lastModified": 1732348057,
+        "narHash": "sha256-D6vrELGNfgTdWWJ1h4roOwV31RQNSoghqnd809B9q0Y=",
         "owner": "pythoneda-shared-pythonlang-def",
         "repo": "domain",
-        "rev": "d4d2b3ab0fc2fe5b65bd2c2c046891322d5525ee",
+        "rev": "1cf8aabcbd932090e3bf3b224c4a2649ddf4730e",
         "type": "github"
       },
       "original": {
         "owner": "pythoneda-shared-pythonlang-def",
-        "ref": "0.0.78",
+        "ref": "0.0.84",
         "repo": "domain",
         "type": "github"
       }
@@ -99,16 +99,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1732302159,
-        "narHash": "sha256-g7s8E6w/iSi8xVO3mUjzx2SRoCP0+fSi+BuOhChmHEQ=",
+        "lastModified": 1732372286,
+        "narHash": "sha256-jh8OkFUKvCq6kJbWLtsI6qKKoT0oXxJ0DIBXTuJBY2E=",
         "owner": "pythoneda-shared-runtime-def",
         "repo": "lifecycle-events",
-        "rev": "ee8740385bc66a11096f313999da31c7a4c4c3e6",
+        "rev": "3402001176fd3c0a434d7497e944cce6a71d28a9",
         "type": "github"
       },
       "original": {
         "owner": "pythoneda-shared-runtime-def",
-        "ref": "0.0.24",
+        "ref": "0.0.25",
         "repo": "lifecycle-events",
         "type": "github"
       }
