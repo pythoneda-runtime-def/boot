@@ -31,7 +31,7 @@
       inputs.nixos.follows = "nixos";
       inputs.pythoneda-shared-pythonlang-banner.follows =
         "pythoneda-shared-pythonlang-banner";
-      url = "github:pythoneda-shared-pythonlang-def/domain/0.0.86";
+      url = "github:pythoneda-shared-pythonlang-def/domain/0.0.87";
     };
     pythoneda-shared-runtime-lifecycle-events = {
       inputs.flake-utils.follows = "flake-utils";
@@ -40,7 +40,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-shared-runtime-def/lifecycle-events/0.0.27";
+      url = "github:pythoneda-shared-runtime-def/lifecycle-events/0.0.28";
     };
   };
   outputs = inputs:
@@ -49,8 +49,8 @@
       let
         org = "pythoneda-runtime";
         repo = "boot";
-        version = "0.0.2";
-        sha256 = "0nq3ddd5b4xy2n7mav57x5cs38b9gsah79dxxyywqrdr6dmqijqw";
+        version = "0.0.3";
+        sha256 = "157v6cfqpri8fiw1zgrwbyaxh6s4xi37pjjhsb2w6b6f5rhff9gf";
         pname = "${org}-${repo}";
         pythonpackage = "pythoneda.runtime.boot";
         package = builtins.replaceStrings [ "." ] [ "/" ] pythonpackage;
