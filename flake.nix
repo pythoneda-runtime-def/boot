@@ -216,7 +216,7 @@
             };
         };
         packages = rec {
-          default = pythoneda-runtime-boot-default = pythoneda-runtime-boot-python312;
+          default = pythoneda-runtime-boot-python312;
           pythoneda-runtime-boot-python39 = pythoneda-runtime-boot-for {
             python = pkgs.python39;
             pythoneda-shared-pythonlang-domain =
