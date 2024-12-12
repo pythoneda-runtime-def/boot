@@ -27,8 +27,8 @@ packages = [{include = "@package@"}]
 
 [tool.poetry.dependencies]
 python = "^@pythonMajorMinorVersion@"
-pythoneda-shared-pythonlang-domain = "^@pythonedaSharedPythonlangDomainVersion@"
-pythoneda-shared-runtime-lifecycle-events = "^@pythonedaSharedRuntimeLifecycleEventsVersion@"
+pythoneda-shared-pythonlang-domain = "^@pythonedaSharedPythonlangDomain@"
+pythoneda-shared-runtime-lifecycle-events = "^@pythonedaSharedRuntimeLifecycleEvents@"
 
 [build-system]
 requires = ["poetry-core"]

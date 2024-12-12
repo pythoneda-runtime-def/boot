@@ -69,7 +69,8 @@
         shared = import "${pythoneda-shared-pythonlang-banner}/nix/shared.nix";
         pythoneda-runtime-boot-for = { python
           , pythoneda-shared-pythonlang-domain
-          , pythoneda-shared-runtime-lifecycle-events }:
+          , pythoneda-shared-runtime-lifecycle-events
+          }:
           let
             pythonVersionParts = builtins.splitVersion python.version;
             pythonMajorVersion = builtins.head pythonVersionParts;
@@ -89,9 +90,9 @@
               desc = description;
               inherit homepage package pname pythonMajorMinorVersion
                 pythonpackage version;
-              pythonedaSharedPythonlangDomainVersion =
+              pythonedaSharedPythonlangDomain =
                 pythoneda-shared-pythonlang-domain.version;
-              pythonedaSharedRuntimeLifecycleEventsVersion =
+              pythonedaSharedRuntimeLifecycleEvents =
                 pythoneda-shared-runtime-lifecycle-events.version;
               src = pyprojectTomlTemplate;
             };
@@ -138,8 +139,8 @@
       in rec {
         defaultPackage = packages.default;
         devShells = rec {
-          default = pythoneda-shared-runtime-lifecycle-events-python312;
-          pythoneda-shared-runtime-lifecycle-events-python39 =
+          default = pythoneda-runtime-boot-python312;
+          pythoneda-runtime-boot-python39 =
             shared.devShell-for {
               banner = "${
                   pythoneda-shared-pythonlang-banner.packages.${system}.pythoneda-shared-pythonlang-banner-python39
@@ -154,7 +155,7 @@
                 pythoneda-shared-pythonlang-domain.packages.${system}.pythoneda-shared-pythonlang-domain-python39;
               inherit archRole layer org pkgs repo space;
             };
-          pythoneda-shared-runtime-lifecycle-events-python310 =
+          pythoneda-runtime-boot-python310 =
             shared.devShell-for {
               banner = "${
                   pythoneda-shared-pythonlang-banner.packages.${system}.pythoneda-shared-pythonlang-banner-python310
@@ -169,7 +170,7 @@
                 pythoneda-shared-pythonlang-domain.packages.${system}.pythoneda-shared-pythonlang-domain-python310;
               inherit archRole layer org pkgs repo space;
             };
-          pythoneda-shared-runtime-lifecycle-events-python311 =
+          pythoneda-runtime-boot-python311 =
             shared.devShell-for {
               banner = "${
                   pythoneda-shared-pythonlang-banner.packages.${system}.pythoneda-shared-pythonlang-banner-python311
@@ -184,7 +185,7 @@
                 pythoneda-shared-pythonlang-domain.packages.${system}.pythoneda-shared-pythonlang-domain-python311;
               inherit archRole layer org pkgs repo space;
             };
-          pythoneda-shared-runtime-lifecycle-events-python312 =
+          pythoneda-runtime-boot-python312 =
             shared.devShell-for {
               banner = "${
                   pythoneda-shared-pythonlang-banner.packages.${system}.pythoneda-shared-pythonlang-banner-python312
@@ -199,7 +200,7 @@
                 pythoneda-shared-pythonlang-domain.packages.${system}.pythoneda-shared-pythonlang-domain-python312;
               inherit archRole layer org pkgs repo space;
             };
-          pythoneda-shared-runtime-lifecycle-events-python313 =
+          pythoneda-runtime-boot-python313 =
             shared.devShell-for {
               banner = "${
                   pythoneda-shared-pythonlang-banner.packages.${system}.pythoneda-shared-pythonlang-banner-python313
