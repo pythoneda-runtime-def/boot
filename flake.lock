@@ -78,7 +78,7 @@
       },
       "original": {
         "owner": "pythoneda-shared-pythonlang-def",
-        "ref": "0.0.103",
+        "ref": "0.0.104",
         "repo": "domain",
         "type": "github"
       }
@@ -99,16 +99,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1734091958,
-        "narHash": "sha256-lIsWApDMA4C61gTartiQRk4j0mAzBtYZc0li4GVk/V4=",
+        "lastModified": 1734107498,
+        "narHash": "sha256-/0A5VKPadT/gqudHP1RNSi3be2hpvTw3UIKKONYZ1Uc=",
         "owner": "pythoneda-shared-runtime-def",
         "repo": "lifecycle-events",
-        "rev": "032dfccff749d5064a8cb2531ca88f8a1f56c5ef",
+        "rev": "6719d53706646a8e208f398643e1a584613d8ee0",
         "type": "github"
       },
       "original": {
         "owner": "pythoneda-shared-runtime-def",
-        "ref": "0.0.39",
+        "ref": "0.0.40",
         "repo": "lifecycle-events",
         "type": "github"
       }
