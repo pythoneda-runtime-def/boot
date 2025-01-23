@@ -20,18 +20,18 @@
   description = "Nix flake for pythoneda-runtime/boot";
   inputs = rec {
     flake-utils.url = "github:numtide/flake-utils/v1.0.0";
-    nixpkgs.url = "github:NixOS/nixpkgs/release-24.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/24.05";
     pythoneda-shared-pythonlang-banner = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:pythoneda-shared-pythonlang-def/banner/0.0.80";
+      url = "github:pythoneda-shared-pythonlang-def/banner/0.0.83";
     };
     pythoneda-shared-pythonlang-domain = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.pythoneda-shared-pythonlang-banner.follows =
         "pythoneda-shared-pythonlang-banner";
-      url = "github:pythoneda-shared-pythonlang-def/domain/0.0.116";
+      url = "github:pythoneda-shared-pythonlang-def/domain/0.0.123";
     };
     pythoneda-shared-runtime-lifecycle-events = {
       inputs.flake-utils.follows = "flake-utils";
@@ -40,7 +40,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-shared-runtime-def/lifecycle-events/0.0.50";
+      url = "github:pythoneda-shared-runtime-def/lifecycle-events/0.0.52";
     };
   };
   outputs = inputs:
